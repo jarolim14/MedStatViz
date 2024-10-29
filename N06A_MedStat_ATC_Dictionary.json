@@ -1,0 +1,51 @@
+{
+  "N06A": {
+    "name": "Antidepressants",
+    "N06AA": {
+      "name": "Non-selective monoamine re-uptake inhibitors",
+      "N06AA02": "Imipramine",
+      "N06AA03": "Imipramine oxide",
+      "N06AA04": "Clomipramine",
+      "N06AA05": "Opipramol",
+      "N06AA06": "Trimipramine",
+      "N06AA07": "Lofepramine",
+      "N06AA09": "Amitriptyline",
+      "N06AA10": "Nortriptyline",
+      "N06AA11": "Protriptyline",
+      "N06AA12": "Doxepin",
+      "N06AA16": "Dosulepin",
+      "N06AA17": "Amoxapine",
+      "N06AA21": "Maprotiline"
+    },
+    "N06AB": {
+      "name": "Selective serotonin re-uptake inhibitors",
+      "N06AB03": "Fluoxetine",
+      "N06AB04": "Citalopram",
+      "N06AB05": "Paroxetine",
+      "N06AB06": "Sertraline",
+      "N06AB08": "Fluvoxamine",
+      "N06AB10": "Escitalopram"
+    },
+    "N06AF": {
+      "name": "Monoamine oxidase inhibitors, non-selective",
+      "N06AF01": "Isocarboxazid"
+    },
+    "N06AG": {
+      "name": "Monoamine oxidase type A inhibitors",
+      "N06AG02": "Moclobemide"
+    },
+    "N06AX": {
+      "name": "Other antidepressants",
+      "N06AX03": "Mianserin",
+      "N06AX06": "Nefazodone",
+      "N06AX11": "Mirtazapine",
+      "N06AX12": "Bupropion",
+      "N06AX16": "Venlafaxine",
+      "N06AX18": "Reboxetine",
+      "N06AX21": "Duloxetine",
+      "N06AX22": "Agomelatine",
+      "N06AX26": "Vortioxetine",
+      "N06AX27": "Esketamine"
+    }
+  }
+}
