@@ -28,3 +28,5 @@ Make sure to install the required dependencies before running the scripts. You c
 ## License
 This project is licensed under the MIT License.
 
+## Installation
+pip install -r requirements.txt
