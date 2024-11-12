@@ -28,7 +28,10 @@ class MedStatURLGenerator:
         },
         "sector": {"0": "Primary Sector", "1": "Hospital Sector", "2": "Total"},
         "gender": {"A": "All", "1": "Men", "2": "Women"},
-        "age_group": {"A": "All"},
+        "age_group": {
+            "A": "All",
+            "[15, 16, 17, 18]": "15, 16, 17, 18 year olds",
+        },
         "search_variable": {
             "people_count": "Number of users",
             "people_count_1000": "Number of users per 1000 inhabitants",
@@ -40,6 +43,11 @@ class MedStatURLGenerator:
     def __init__(self):
         """Initialize the URL generator."""
         pass
+
+    @staticmethod
+    def format_age_codes(ages: List[int]) -> List[str]:
+        """Convert list of ages to zero-padded, three-digit string codes."""
+        return [f"{age:03}" for age in ages]
 
     @classmethod
     def print_options(cls, category: Optional[str] = None) -> None:
@@ -116,6 +124,14 @@ class MedStatURLGenerator:
             years = years or self.DEFAULT_YEARS
             gender_list = [gender] if isinstance(gender, str) else gender
 
+            # Handle age group formatting
+            if age_group == "A":
+                age_group_codes = ["A"]
+            elif isinstance(age_group, list):
+                age_group_codes = self.format_age_codes(age_group)
+            else:
+                raise TypeError("age_group must be 'A' or a list of integers")
+
             # Validate sector-specific constraints
             if sector != "0":  # If not primary sector
                 if (
@@ -133,7 +149,7 @@ class MedStatURLGenerator:
                 "year": years,
                 "region": [region],
                 "gender": gender_list,
-                "ageGroup": [age_group],
+                "ageGroup": age_group_codes,
                 "searchVariable": [search_variable],
                 "errorMessages": [],
                 "atcCode": atc_codes,
